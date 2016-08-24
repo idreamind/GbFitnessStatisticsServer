@@ -31,7 +31,7 @@ function Controllers() {
         let user = req.body.user,
             pass = req.body.pass;
 
-        if (user === 'admin' && pass === '123') {
+        if (user === 'admin' && pass === '12918') {
             res.send({
                 success: true,
                 key: KEY
