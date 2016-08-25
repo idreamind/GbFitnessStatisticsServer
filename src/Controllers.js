@@ -55,7 +55,8 @@ function Controllers() {
                         obj.push({
                             user_id: row.user_id,
                             name: row.first_name + ((row.last_name) ? ' ' + row.last_name : ''),
-                            time: (row.time) ? row.time.toString() : undefined
+                            time: (row.time) ? row.time.toString() : undefined,
+                            type: (row.type) ? row.type : 0
                         });
                     });
                     res.send({
