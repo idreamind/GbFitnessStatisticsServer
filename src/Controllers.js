@@ -86,7 +86,7 @@ function Controllers() {
                 };
             pool.getConnection((err, connection) => {
                 var qr = connection.query('INSERT INTO bot_delivery SET ?', to_db, (err, result) => {
-                    // connection.release();
+                    connection.release();
                     res.send({
                         success: true
                     });
@@ -108,7 +108,6 @@ function Controllers() {
                     connection.release();
                     var obj = [];
                     rows.forEach((row) => {
-                        console.log(row);
                         obj.push({
                             times: row.time,
                             users_ids: row.users_ids,
